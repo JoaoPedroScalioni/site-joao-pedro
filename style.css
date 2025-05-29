@@ -8,13 +8,12 @@
     --banner-gradient-end: rgba(0, 80, 170, 0.65);    /* Tom médio do azul secundário, semi-transparente */
 
     /* Cores para o Botão do Banner */
-    --banner-btn-bg: #FFFFFF;                        /* Fundo branco para o botão */
-    --banner-btn-text: var(--cor-primaria);          /* Texto azul escuro (cor primária do site) */
-    --banner-btn-border: var(--cor-primaria);        /* Borda azul escuro */
-    --banner-btn-hover-bg: var(--cor-secundaria);    /* Fundo azul brilhante no hover */
-    --banner-btn-hover-text: #FFFFFF;                /* Texto branco no hover */
-    --banner-btn-hover-border: var(--cor-secundaria);/* Borda azul brilhante no hover */
-
+    --banner-btn-bg: #FFFFFF;                         /* Fundo branco para o botão */
+    --banner-btn-text: var(--cor-primaria);           /* Texto azul escuro (cor primária do site) */
+    --banner-btn-border: var(--cor-primaria);         /* Borda azul escuro */
+    --banner-btn-hover-bg: var(--cor-secundaria);     /* Fundo azul brilhante no hover */
+    --banner-btn-hover-text: #FFFFFF;                 /* Texto branco no hover */
+    --banner-btn-hover-border: var(--cor-secundaria); /* Borda azul brilhante no hover */
 
     --cor-sucesso: #28A745; /* Verde para WhatsApp e sucesso */
     --cor-texto: #f8f9fa; /* Branco Suave (usado no banner sobre fundo escuro) */
@@ -38,7 +37,7 @@ body {
     line-height: 1.7;
     color: var(--cor-texto-paragrafo);
     background-color: var(--cor-fundo);
-    padding-top: 75px; /* Espaço para o header fixo */
+    /* padding-top: 75px; */ /* REMOVIDO - Espaço para o header fixo */
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
@@ -129,7 +128,8 @@ ul li i.fa-check-circle {
 }
 
 
-/* Cabeçalho e Navegação */
+/* Cabeçalho e Navegação - Estilos comentados pois o header foi removido do HTML inicial */
+/*
 header {
     background-color: #fff;
     color: var(--cor-texto-escuro);
@@ -185,6 +185,7 @@ header ul li a.active {
     color: var(--cor-secundaria);
     border-bottom-color: var(--cor-secundaria);
 }
+*/
 
 /* Seções */
 section {
@@ -199,13 +200,12 @@ section:nth-of-type(even) {
 /* Seção Início (Banner) - FUNDO E TEXTO ATUALIZADOS */
 section#inicio {
     background: linear-gradient(var(--banner-gradient-start), var(--banner-gradient-end)), url('https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80') no-repeat center center/cover;
-    /* >>> A URL DA IMAGEM FOI RESTAURADA PARA A PRIMEIRA <<< */
     color: var(--cor-texto); /* Texto do banner */
     min-height: 70vh; /* Altura do banner ajustada */
     display: flex;
     flex-direction: column;
     justify-content: center; /* Centraliza verticalmente */
-    align-items: center;    /* Centraliza horizontalmente */
+    align-items: center;     /* Centraliza horizontalmente */
     text-align: center;       /* Garante que o texto dentro do container seja centralizado */
     padding: 40px 20px; /* Padding interno do banner, pode ajustar */
 }
@@ -252,10 +252,10 @@ section#inicio p {
 /* Estilo do BOTÃO PRINCIPAL no banner - HOVER ATUALIZADO */
 .btn-principal {
     background-color: var(--banner-btn-bg); /* Fundo branco */
-    color: var(--banner-btn-text);         /* Texto azul escuro */
+    color: var(--banner-btn-text);          /* Texto azul escuro */
     border: 2px solid var(--banner-btn-border); /* Borda azul escuro */
-    border-radius: 6px;                   /* Mais quadrado */
-    padding: 14px 38px;                   /* Ajuste de padding */
+    border-radius: 6px;                     /* Mais quadrado */
+    padding: 14px 38px;                     /* Ajuste de padding */
     font-size: 1.1rem;
 }
 .btn-principal:hover {
@@ -383,7 +383,6 @@ section#inicio p {
     text-align: center;
 }
 #contato h2 { color: var(--cor-texto); }
-/* Usar uma cor de destaque consistente para os ::after dos H2 das seções escuras */
 #contato h2::after { background-color: var(--cor-secundaria); }
 #contato p { color: var(--cor-texto); opacity: 0.9; max-width: 650px; margin-left: auto; margin-right: auto; font-size: 1.1rem; }
 
@@ -412,7 +411,6 @@ section#inicio p {
     margin: 0 20px;
     transition: color 0.3s ease, transform 0.2s ease;
 }
-/* Usar uma cor de destaque consistente para o hover dos links sociais */
 .social-links a:hover { color: var(--cor-secundaria); transform: translateY(-4px); }
 
 /* Rodapé */
@@ -436,7 +434,10 @@ footer {
 }
 
 @media (max-width: 768px) {
-    body { padding-top: 0; }
+    /* body { padding-top: 0; } */ /* Já removido globalmente, não precisa aqui */
+    
+    /* Estilos de header removidos/comentados pois header não está mais no topo */
+    /*
     header {
         position: relative;
         padding: 15px 0;
@@ -451,7 +452,7 @@ footer {
     }
     header ul li { margin: 8px 0; }
     header ul li a { padding: 8px 15px; border-bottom-width: 2px; }
-
+    */
 
     h1 { font-size: 2rem; }
     section#inicio h1 { font-size: 2.5rem; }
